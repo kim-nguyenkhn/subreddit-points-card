@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Card from "./components/Card";
+import get from "lodash/get";
 import "./App.css";
 
 class App extends Component {
@@ -10,11 +11,14 @@ class App extends Component {
   };
 
   normalize = json => {
-    const change = json.meta.subredditValue.change.toFixed(1); // number
-    const value = json.meta.subredditValue.value.toLocaleString("en-US");
-    const totalAvailable = json.distribution.totalAvailable.toLocaleString(
+    const change = get(json, "meta.subredditValue.change").toFixed(1); // number
+    const value = get(json, "meta.subredditValue.value").toLocaleString(
       "en-US"
     );
+    const totalAvailable = get(
+      json,
+      "distribution.totalAvailable"
+    ).toLocaleString("en-US");
     return [change, value, totalAvailable];
   };
 
