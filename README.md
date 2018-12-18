@@ -1,6 +1,8 @@
 # Subreddit Points Card
 
-Simple ReactJS build of the Subreddit Points component.
+Simple ReactJS build of the Subreddit Points component. 
+
+Check out the live demo on [Heroku](https://subreddit-points-card.herokuapp.com/).
 
 <img src="subreddit-points.png" width=500>
 
