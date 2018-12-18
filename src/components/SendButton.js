@@ -12,6 +12,12 @@ const SendButton = () => (
       font-size: 16px;
       padding: 6px 12px;
       text-transform: uppercase;
+      cursor: pointer;
+      transition: all 200ms ease;
+      &:hover {
+        background-color: rgb(90, 116, 204);
+        color: #fff;
+      }
     `}
   >
     Send
