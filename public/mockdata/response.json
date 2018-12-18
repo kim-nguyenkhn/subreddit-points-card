@@ -1,0 +1,35 @@
+{
+	"assets": {
+		"mainHeader": {
+			"content": {
+				"bannerBackgroundImage": "https://reddit-subreddit-uploaded-media.s3-accelerate.amazonaws.com/t5_37jgj/styles/bannerBackgroundImage_9ch2nnxasa421.jpg",
+				"bannerBackgroundImagePosition": "cover"
+			},
+			"owner": "shouldbdan",
+			"ownerId": "t2_izp2e",
+			"price": "700000"
+		},
+		"pinnedPolls": {}
+	},
+	"distribution": {
+		"nextIssue": "2000000",
+		"nextIssueAt": 1545159363000,
+		"totalAvailable": "91414707"
+	},
+	"meta": {
+		"images": {
+			"filled": "img/communityPoints/Donuts_filled.png",
+			"grey": "img/communityPoints/Donuts_grey.png"
+		},
+		"name": "Donuts",
+		"polls": {
+			"decisionThreshold": "6105998",
+			"pinPollPercentThreshold": null,
+			"price": "100"
+		},
+		"subredditValue": {
+			"change": -0.09709999710321426,
+			"value": "4190240"
+		}
+	}
+}
