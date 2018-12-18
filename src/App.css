@@ -1,3 +1,8 @@
 body {
   background-color: #DAE0E6;
+  margin: 40px auto;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
 }

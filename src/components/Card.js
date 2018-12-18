@@ -4,25 +4,27 @@ import { jsx, css } from "@emotion/core";
 import styled from "@emotion/styled";
 
 import CardHeader from "./CardHeader";
-import CardSection from "./CardSection";
+import SubredditValueSection from "./SubredditValueSection";
+import DonutsSection from "./DonutsSection";
 import SendButton from "./SendButton";
 
 const Card = ({ change, value, totalAvailable }) => (
   <>
     <CardContainer>
       <CardHeader headerText="Subreddit Points" />
-      <CardSection
-        headerText="Subreddit Value"
-        amount={12309}
-        change={2.5}
-        content="Lorem Ipsum baby"
-      />
-      <CardSection
-        headerText="Donuts"
-        amount={134098890}
-        content="Lorem Ipsum baby"
-      />
-      <SendButton />
+      <CardBody>
+        <SubredditValueSection
+          headerText="Subreddit Value"
+          amount={value}
+          change={change}
+          descriptionText="Estimate based on number of users and user engagement."
+        />
+        <DonutsSection
+          headerText="Donuts"
+          amount={totalAvailable}
+          descriptionText="Subreddit Points reward posters, commenters, and moderators for their contributions. Used to weight vote on polls, tip content and buy badges. They are distributed weekly."
+        />
+      </CardBody>
     </CardContainer>
   </>
 );
@@ -30,11 +32,13 @@ const Card = ({ change, value, totalAvailable }) => (
 const CardContainer = styled.div`
   width: 312px;
   margin: 0 auto;
+  border-radius: 5px 5px 4px 4px;
+  background-color: #fff;
 `;
 
-//Header
-//Subreddit Value - {value}, ^{change}
-//Donuts - {totalAvailable}
+const CardBody = styled.div`
+  padding: 12px;
+`;
 
 Card.defaultProps = {
   change: "0",

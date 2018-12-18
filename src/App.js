@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Card from "./components/Card";
+import "./App.css";
 
 class App extends Component {
   state = {
@@ -8,20 +9,29 @@ class App extends Component {
     totalAvailable: ""
   };
 
+  normalize = json => {
+    const change = json.meta.subredditValue.change.toFixed(1); // number
+    const value = json.meta.subredditValue.value.toLocaleString("en-US");
+    const totalAvailable = json.distribution.totalAvailable.toLocaleString(
+      "en-US"
+    );
+    return [change, value, totalAvailable];
+  };
+
   componentDidMount = async () => {
+    // NOTE: Using this mockdata because Response lacks CORS header 'Access-Control-Allow-Origin'
     let response = await fetch("mockdata/response.json");
     let json = await response.json();
+    let [change, value, totalAvailable] = this.normalize(json);
 
     this.setState({
-      change: json.meta.subredditValue.change,
-      value: json.meta.subredditValue.value,
-      totalAvailable: json.distribution.totalAvailable
+      change,
+      value,
+      totalAvailable
     });
   };
 
   render() {
-    // const { change, value, totalAvailable } = this.state;
-    // console.log({ change, value, totalAvailable });
     return (
       <>
         <Card {...this.state} />
