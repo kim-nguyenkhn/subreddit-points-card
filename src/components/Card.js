@@ -10,9 +10,9 @@ import SendButton from "./SendButton";
 
 const Card = ({ change, value, totalAvailable }) => (
   <>
-    <CardContainer>
+    <StyledCardContainer>
       <CardHeader headerText="Subreddit Points" />
-      <CardBody>
+      <StyledCardBody>
         <SubredditValueSection
           headerText="Subreddit Value"
           amount={value}
@@ -24,19 +24,19 @@ const Card = ({ change, value, totalAvailable }) => (
           amount={totalAvailable}
           descriptionText="Subreddit Points reward posters, commenters, and moderators for their contributions. Used to weight vote on polls, tip content and buy badges. They are distributed weekly."
         />
-      </CardBody>
-    </CardContainer>
+      </StyledCardBody>
+    </StyledCardContainer>
   </>
 );
 
-const CardContainer = styled.div`
+const StyledCardContainer = styled.div`
   width: 312px;
   margin: 0 auto;
   border-radius: 5px 5px 4px 4px;
   background-color: #fff;
 `;
 
-const CardBody = styled.div`
+const StyledCardBody = styled.div`
   padding: 12px;
 `;
 
