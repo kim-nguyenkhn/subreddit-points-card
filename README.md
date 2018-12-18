@@ -4,7 +4,7 @@ Simple ReactJS build of the Subreddit Points component.
 
 Check out the live demo on [Heroku](https://subreddit-points-card.herokuapp.com/).
 
-<img src="subreddit-points.png" **width**=500>
+<img src="subreddit-points.png" width=500>
 
 ## Future Tasks
 - Change the API call to leverage some form of the [Render Props](https://reactjs.org/docs/render-props.html) pattern. This way, we can do the following:
